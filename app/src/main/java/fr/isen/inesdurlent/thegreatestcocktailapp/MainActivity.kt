@@ -86,7 +86,7 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(
                         navController = navController,
-                        startDestination = "list",
+                        startDestination = "splash",
                         modifier = Modifier.padding(padding)
                     ) {
 
@@ -96,6 +96,10 @@ class MainActivity : ComponentActivity() {
 
                         composable("list") {
                             CategoriesScreen(navController)
+                        }
+
+                        composable("splash") {
+                            SplashScreen(navController)
                         }
 
                         composable("favorites") {
